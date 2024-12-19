@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+int main() {
+    setlocale(LC_ALL, "Russian");
+    int N;
+    cout << "Введите целое число N > 0 для нахождения произведения: ";
+    cin >> N;
+    int product = 1;
+    for (int i = 1; i <= N; ++i) {
+        product *= i;
+        if (product > 500) {
+            cout << "Произведение чисел от 1 до " << i << " превысило 500: " << product << endl;
+            break;
+        }
+    }
+
+    if (product <= 500)
+        cout << "Произведение чисел от 1 до " << N << " равно " << product << endl;
+    cout << endl;
+    return 0;
+}
